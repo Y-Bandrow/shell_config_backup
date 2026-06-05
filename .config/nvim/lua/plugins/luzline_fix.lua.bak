@@ -1,0 +1,12 @@
+return {
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = function(_, opts)
+      -- 换成硬朗帅气的斜线分割
+      -- opts.options.component_separators = { left = "╱", right = "╱" }
+      opts.options.component_separators = { left = "|", right = "|" }
+      -- opts.options.section_separators = { left = "", right = "" }
+      opts.options.section_separators = { left = "", right = "" }
+    end,
+  },
+}

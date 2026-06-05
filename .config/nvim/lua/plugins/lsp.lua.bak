@@ -1,0 +1,17 @@
+return {
+  "neovim/nvim-lspconfig",
+  opts = {
+    servers = {
+      clangd = {
+        -- 传递给 clangd 的启动参数
+        cmd = {
+          "clangd",
+          "--background-index",
+          "--clang-tidy",
+          -- 核心：让 clangd 强制使用你指定的 .clang-format 配置文件
+          "--fallback-style=file:/home/syy/clang_format/.clang-format",
+        },
+      },
+    },
+  },
+}

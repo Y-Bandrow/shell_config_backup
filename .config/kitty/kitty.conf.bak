@@ -1,0 +1,74 @@
+# --- 字体与大小 ---
+font_family      JetBrainsMono Nerd Font
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+font_size        14.0
+
+# --- 拯救“太丑”的核心：窗口间距 (Padding) ---
+# 默认的 Kitty 字都贴在屏幕最边缘，加上边距立刻变高级
+window_padding_width 1
+
+# --- 现代感：半透明与毛玻璃 (仅限支持的桌面环境) ---
+# 如果你用的是 Fedora 43 默认的 GNOME 桌面，这会让窗口带有一点优雅的通透感
+background_opacity 1
+
+# --- 窗口极简美化 (新增：隐藏顶部标题栏) ---
+hide_window_decorations yes
+
+# --- 标签页美化 (如果你用多标签) ---
+tab_bar_style               powerline
+tab_bar_edge                top
+tab_powerline_style         slanted
+active_tab_foreground       #1e1e2e
+active_tab_background       #cdd6f4
+inactive_tab_foreground     #bac2de
+inactive_tab_background     #313244
+
+# --- 光标样式 ---
+cursor_shape block
+shell_integration dashed cursor
+
+# --- 铺底配色（直接套用著名的 Catppuccin 优雅暗色主题） ---
+background            #1e1e2e
+foreground            #cdd6f4
+selection_background  #f5e0dc
+selection_foreground  #1e1e2e
+#cursor                #f5e0dc
+cursor                #c0caf5
+
+# 终端 16 色调色盘（让你的编译报错、Git 提示颜色不再高饱和刺眼）
+color0  #45475a
+color8  #585b70
+color1  #f38ba8
+color9  #f38ba8
+color2  #a6e3a1
+color10 #a6e3a1
+color3  #f9e2af
+color11 #f9e2af
+color4  #89b4fa
+color12 #89b4fa
+color5  #f5c2e7
+color13 #f5c2e7
+color6  #94e2d5
+color14 #94e2d5
+color7  #bac2de
+color15 #a6adc8
+
+# --- 快捷键：Alt + 数字 切换标签页 ---
+map alt+1 goto_tab 1
+map alt+2 goto_tab 2
+map alt+3 goto_tab 3
+map alt+4 goto_tab 4
+map alt+5 goto_tab 5
+map alt+6 goto_tab 6
+map alt+7 goto_tab 7
+map alt+8 goto_tab 8
+map alt+9 goto_tab 9
+
+map shift+page_up   scroll_page_up
+map shift+page_down scroll_page_down
+
+# --- 只要键盘一打字，立刻自动滚回最底部 ---
+scroll_to_be_on_input yes
+
