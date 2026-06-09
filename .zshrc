@@ -109,3 +109,5 @@ alias cl="clear"
 alias open="xdg-open"
 export http_proxy="http://127.0.0.1:7890"
 export https_proxy="http://127.0.0.1:7890"
+# 开启智能大小写匹配
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
