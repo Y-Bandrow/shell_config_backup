@@ -107,7 +107,25 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cl="clear"
 alias open="xdg-open"
+alias vi="nvim"
 export http_proxy="http://127.0.0.1:7890"
 export https_proxy="http://127.0.0.1:7890"
 # 开启智能大小写匹配
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# claude + deeepseek api
+export PATH="$HOME/.local/bin:$PATH"
+export ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic
+export ANTHROPIC_AUTH_TOKEN=sk-666d2d85cbcc40689d2c86f817849c90
+if true; then
+    export ANTHROPIC_MODEL=deepseek-v4-flash
+    export ANTHROPIC_DEFAULT_OPUS_MODEL=deepseek-v4-flash
+    export ANTHROPIC_DEFAULT_SONNET_MODEL=deepseek-v4-flash
+else
+    export ANTHROPIC_MODEL=deepseek-v4-pro
+    export ANTHROPIC_DEFAULT_OPUS_MODEL=deepseek-v4-pro
+    export ANTHROPIC_DEFAULT_SONNET_MODEL=deepseek-v4-pro
+fi
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=deepseek-v4-flash
+export CLAUDE_CODE_SUBAGENT_MODEL=deepseek-v4-flash
+export CLAUDE_CODE_EFFORT_LEVEL=max
